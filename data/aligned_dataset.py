@@ -72,7 +72,7 @@ class AlignedDataset(BaseDataset):
             zip(info["annotations"], info["labels"])
         ):
             sub_mask = self.rle_decode(
-                annotation, (info["orig_height"], info["orig_width"])
+                annotation, (int(info["orig_height"]), int(info["orig_width"]))
             )
             sub_mask = Image.fromarray(sub_mask)
             sub_mask = sub_mask.resize(
