@@ -1,0 +1,7 @@
+input_images/*
+!input_images/.keep
+
+output_images/*
+!output_images/.keep
+
+checkpoint_u2net.pth

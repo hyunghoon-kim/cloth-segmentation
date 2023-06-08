@@ -8,25 +8,21 @@ from utils.saving_utils import save_checkpoint
 os.makedirs("prev_checkpoints", exist_ok=True)
 gdown.download(
     "https://drive.google.com/uc?id=1ao1ovG1Qtx4b7EoskHXmi2E9rp5CHLcZ",
-    "./prev_checkpoints/u2net.pth",
+    "checkpoint_u2net.pth",
     quiet=False,
 )
+net_state_dict = torch.load("checkpoint_u2net.pth")
 
 u_net = U2NET(in_ch=3, out_ch=4)
-save_checkpoint(u_net, os.path.join("prev_checkpoints", "u2net_random.pth"))
+save_checkpoint(u_net, os.path.join("checkpoint_u2net.pth"))
+custom_state_dict = torch.load("checkpoint_u2net.pth")
 
-# u2net.pth contains trained weights
-trained_net_pth = os.path.join("prev_checkpoints", "u2net.pth")
-# u2net_random.pth contains random weights
-custom_net_pth = os.path.join("prev_checkpoints", "u2net_random.pth")
-
-net_state_dict = torch.load(trained_net_pth)
 count = 0
 for k, v in net_state_dict.items():
     count += 1
 print("Total number of layers in trained model are: {}".format(count))
 
-custom_state_dict = torch.load(custom_net_pth)
+
 count = 0
 for k, v in custom_state_dict.items():
     count += 1
@@ -46,6 +42,6 @@ print(
     )
 )
 torch.save(
-    custom_state_dict, os.path.join("prev_checkpoints", "cloth_segm_unet_surgery.pth")
+    custom_state_dict, "checkpoint_u2net.pth"
 )
 print("cloth_segm_unet_surgery.pth is generated in prev_checkpoints directory!")
