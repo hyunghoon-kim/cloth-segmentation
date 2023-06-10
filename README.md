@@ -1,7 +1,7 @@
 # FORK #
 I forked the cloth segmentation repo, trained the model for 4 epochs(https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link) and made some adjustments for easy setup (inference).
 
-#Usage
+# Usage
 - install dependencies: ```pip install -r requirements.txt```
 - download model checkpoint: ```gdown --output checkpoint_u2net.pth 1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v```
 - put images into ```input_images```
