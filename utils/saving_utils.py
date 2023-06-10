@@ -9,8 +9,7 @@ import torch
 
 def load_checkpoint(model, checkpoint_path):
     if not os.path.exists(checkpoint_path):
-        print("----No checkpoints at given path----")
-        return
+        raise Exception("----No checkpoints at given path----")
     model.load_state_dict(torch.load(checkpoint_path, map_location=torch.device("cpu")))
     print("----checkpoints loaded from path: {}----".format(checkpoint_path))
     return model
@@ -18,8 +17,7 @@ def load_checkpoint(model, checkpoint_path):
 
 def load_checkpoint_mgpu(model, checkpoint_path):
     if not os.path.exists(checkpoint_path):
-        print("----No checkpoints at given path----")
-        return
+        raise Exception("----No checkpoints at given path----")
     model_state_dict = torch.load(checkpoint_path, map_location=torch.device("cpu"))
     model.load_state_dict(model_state_dict)
     print("----checkpoints loaded from path: {}----".format(checkpoint_path))

@@ -1,6 +1,5 @@
 input_images/*
-!input_images/.keep
-
+!input_images/0a563d036018e91cd9b5899adb50ec18.jpg
 output_images/*
 !output_images/.keep
 

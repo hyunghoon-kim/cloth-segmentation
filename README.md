@@ -1,3 +1,15 @@
+# FORK #
+I forked the cloth segmentation repo, trained the model for 4 epochs(https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link) and made some adjustments for easy setup (inference).
+
+#Usage
+- install dependencies: ```pip install -r requirements.txt```
+- download model checkpoint: ```gdown --output checkpoint_u2net.pth 1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v```
+- put images into ```input_images```
+- inference to ```output_images``` on cpu or gpu:
+  - DEVICE=cpu python infer.py
+  - python infer.py
+
+# Original Readme:
 # Clothes Segmentation using U2NET #
 
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
@@ -19,7 +31,7 @@ This model works well with any background and almost all poses. For more samples
 
 * **Dataset** : U2net is trained on 45k images [iMaterialist (Fashion) 2019 at FGVC6](https://www.kaggle.com/c/imaterialist-fashion-2019-FGVC6/data) dataset. To reduce complexity, I have clubbed the original 42 categories from dataset labels into 3 categories (upper body, lower body and full body). All images are resized into square `¯\_(ツ)_/¯` 768 x 768 px for training. (This experiment was conducted with 768 px but around 384 px will work fine too if one is retraining on another dataset).
 
-# Training 
+# Training
 
 - For training this project requires,
 <ul>
@@ -47,10 +59,9 @@ Here command is for single node, 4 gpu. Tested only for single node.
 - Put input images in `input_images` folder
 - Run `python infer.py` for inference.
 - Output will be saved in `output_images`
-### OR 
+### OR
 - Inference in colab from here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EhEy3uQh-5oOSagUotVOJAf8m7Vqn0D6?usp=sharing)
 
 # Acknowledgements
 - U2net model is from original [u2net repo](https://github.com/xuebinqin/U-2-Net). Thanks to Xuebin Qin for amazing repo.
 - Complete repo follows structure of [Pix2pixHD repo](https://github.com/NVIDIA/pix2pixHD)
-

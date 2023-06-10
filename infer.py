@@ -18,10 +18,12 @@ from utils.saving_utils import load_checkpoint_mgpu
 
 from networks import U2NET
 
-device = os.environ.get("DEVICE", "gpu")
+device = os.environ.get("DEVICE", "cuda")
 
 image_dir = "input_images"
 result_dir = "output_images"
+os.makedirs(result_dir, exist_ok=True)
+
 checkpoint_path = "checkpoint_u2net.pth"
 do_palette = True
 
@@ -69,7 +71,9 @@ pbar = tqdm(total=len(images_list))
 
 for image_name in images_list:
     img = Image.open(os.path.join(image_dir, image_name)).convert("RGB")
-    img = img.resize((768, 768), resample=Image.BICUBIC)
+    # img = img.resize((768, 768), resample=Image.BICUBIC)
+    img.thumbnail((768, 768), Image.LANCZOS)
+
     image_tensor = transform_rgb(img)
     image_tensor = torch.unsqueeze(image_tensor, 0)
 
