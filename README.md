@@ -6,8 +6,8 @@ I forked the cloth segmentation repo, trained the model for 4 epochs(https://dri
 - download model checkpoint: ```gdown --output checkpoint_u2net.pth 1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v```
 - put images into ```input_images```
 - inference to ```output_images``` on cpu or gpu:
-  - DEVICE=cpu python infer.py
-  - python infer.py
+  - ```DEVICE=cpu python infer.py```
+  - ```python infer.py```
 
 # Original Readme:
 # Clothes Segmentation using U2NET #
