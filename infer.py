@@ -20,8 +20,9 @@ from networks import U2NET
 
 device = os.environ.get("DEVICE", "cuda")
 
-image_dir = "input_images"
-result_dir = "output_images"
+image_dir = os.environ.get("INPUT_DIR", "input_images")
+result_dir = os.environ.get("OUTPUT_DIR", "output_images")
+
 os.makedirs(result_dir, exist_ok=True)
 
 checkpoint_path = "checkpoint_u2net.pth"
