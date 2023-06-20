@@ -8,4 +8,4 @@ infer_cpu:
 	PYTHONPATH=. DEVICE=cpu python infer.py
 
 infer_gpu:
-	PYTHONPATH=. python infer.py
+	PYTHONPATH=. python cloth_segmentation/infer.py
