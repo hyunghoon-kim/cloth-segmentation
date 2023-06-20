@@ -3,11 +3,12 @@ import copy
 import cv2
 import numpy as np
 from collections import OrderedDict
-
+from cloth_segmentation import ROOT_DIR
 import torch
 
 
 def load_checkpoint(model, checkpoint_path):
+    checkpoint_path = os.path.join(ROOT_DIR, checkpoint_path)
     if not os.path.exists(checkpoint_path):
         raise Exception("----No checkpoints at given path----")
     model.load_state_dict(torch.load(checkpoint_path, map_location=torch.device("cpu")))
@@ -16,6 +17,7 @@ def load_checkpoint(model, checkpoint_path):
 
 
 def load_checkpoint_mgpu(model, checkpoint_path):
+    checkpoint_path = os.path.join(ROOT_DIR, checkpoint_path)
     if not os.path.exists(checkpoint_path):
         raise Exception("----No checkpoints at given path----")
     model_state_dict = torch.load(checkpoint_path, map_location=torch.device("cpu"))
@@ -25,6 +27,7 @@ def load_checkpoint_mgpu(model, checkpoint_path):
 
 
 def save_checkpoint(model, save_path):
+    save_path = os.path.join(ROOT_DIR, save_path)
     print(save_path)
     if not os.path.exists(os.path.dirname(save_path)):
         os.makedirs(os.path.dirname(save_path))

@@ -1,5 +1,5 @@
-from data.base_dataset import BaseDataset, Rescale_fixed, Normalize_image
-from data.image_folder import make_dataset, make_dataset_test
+from cloth_segmentation.data.base_dataset import BaseDataset, Rescale_fixed, Normalize_image
+from cloth_segmentation.data.image_folder import make_dataset, make_dataset_test
 
 import os
 import cv2
