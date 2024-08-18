@@ -1,5 +1,5 @@
-# Download model
-- [GDrive](https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB)
+## 📥 Download Model
+- **Google Drive**: [Download here](https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link) (165 MB)
 
 # Usage
 - install dependencies: ```pip install -r requirements.txt```
