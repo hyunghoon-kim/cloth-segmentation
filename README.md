@@ -1,5 +1,5 @@
 # Download model
-- [GDrive]((https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB)
+- [GDrive](https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB)
 
 # Usage
 - install dependencies: ```pip install -r requirements.txt```
@@ -55,7 +55,7 @@ Here command is for single node, 4 gpu. Tested only for single node.
 
 
 # Testing/Inference
-- Download pretrained model from this [link]((https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB) in `trained_checkpoint` folder.
+- Download pretrained model from this [link](https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB) in `trained_checkpoint` folder.
 - Put input images in `input_images` folder
 - Run `python infer.py` for inference.
 - Output will be saved in `output_images`
