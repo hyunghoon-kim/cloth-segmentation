@@ -1,5 +1,5 @@
-# FORK #
-I forked the cloth segmentation repo, trained the model for 4 epochs(https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link) and made some adjustments for easy setup (inference).
+# Download model
+- [GDrive]((https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB)
 
 # Usage
 - install dependencies: ```pip install -r requirements.txt```
@@ -14,7 +14,7 @@ I forked the cloth segmentation repo, trained the model for 4 epochs(https://dri
 
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EhEy3uQh-5oOSagUotVOJAf8m7Vqn0D6?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q-lJAVWZQEg8EO2JedKOI38wkJmG4I9L#scrollTo=v2HHnoidJPiy)
 
 This repo contains training code, inference code and pre-trained model for Cloths Parsing from human portrait.</br>
 Here clothes are parsed into 3 category: Upper body(red), Lower body(green) and Full body(yellow)
@@ -55,12 +55,12 @@ Here command is for single node, 4 gpu. Tested only for single node.
 
 
 # Testing/Inference
-- Download pretrained model from this [link](https://drive.google.com/file/d/1mhF3yqd7R-Uje092eypktNl-RoZNuiCJ/view?usp=sharing)(165 MB) in `trained_checkpoint` folder.
+- Download pretrained model from this [link]((https://drive.google.com/file/d/1aS4gB2UucK1twuU5ROg_MYRIxm3jmk1v/view?usp=drive_link)(165 MB) in `trained_checkpoint` folder.
 - Put input images in `input_images` folder
 - Run `python infer.py` for inference.
 - Output will be saved in `output_images`
 ### OR
-- Inference in colab from here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EhEy3uQh-5oOSagUotVOJAf8m7Vqn0D6?usp=sharing)
+- Inference in colab from here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q-lJAVWZQEg8EO2JedKOI38wkJmG4I9L#scrollTo=v2HHnoidJPiy)
 
 # Acknowledgements
 - U2net model is from original [u2net repo](https://github.com/xuebinqin/U-2-Net). Thanks to Xuebin Qin for amazing repo.
