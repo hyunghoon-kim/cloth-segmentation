@@ -17,7 +17,7 @@
 
 ![Python 3.8](https://img.shields.io/badge/python-3.8-green.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q-lJAVWZQEg8EO2JedKOI38wkJmG4I9L#scrollTo=v2HHnoidJPiy)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q-lJAVWZQEg8EO2JedKOI38wkJmG4I9L?usp=sharing)
 
 This repo contains training code, inference code and pre-trained model for Cloths Parsing from human portrait.</br>
 Here clothes are parsed into 3 category: Upper body(red), Lower body(green) and Full body(yellow)
@@ -63,7 +63,7 @@ Here command is for single node, 4 gpu. Tested only for single node.
 - Run `python infer.py` for inference.
 - Output will be saved in `output_images`
 ### OR
-- Inference in colab from here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q-lJAVWZQEg8EO2JedKOI38wkJmG4I9L#scrollTo=v2HHnoidJPiy)
+- Inference in colab from here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q-lJAVWZQEg8EO2JedKOI38wkJmG4I9L?usp=sharing)
 
 # Acknowledgements
 - U2net model is from original [u2net repo](https://github.com/xuebinqin/U-2-Net). Thanks to Xuebin Qin for amazing repo.
