@@ -1,0 +1,25 @@
+{
+    "prompt": "A full-body fashion photograph of a woman wearing a simple t-shirt and jeans, smiling and looking ahead, high-quality, realistic lighting, detailed studio shoot",
+    "negative_prompt": "(worst quality:2, low quality:2, normal quality:2), easynegative, ng_deepnegative_v1_75t, (Heavy Makeup), (double eyelid:1.4), eyeshadow, (eyeliner), eyelashes, Earrings, Necklaces, (Monochrome), (nsfw:1.4), bad_prompt_version2-neg, (teeth:1.8)",
+    "steps": 30,
+    "seed": -1,
+    "width": 1024,
+    "height": 1024,
+    "cfg_scale": 3,
+    "sampler_name": "DPM++ 3M SDE",
+    "scheduler": "Automatic",
+    "n_iter": 1,
+    "batch_size": 1,
+    "clip_skip": 5,
+    "override_settings": {"sd_model_checkpoint": "sdxl10ArienmixxlAsian_v45Pruned"},
+    "alwayson_scripts":{
+        "ADetailer": {
+                "args": [
+                    {
+                    "ad_prompt": "beautiful face, detailed face, cute",
+                    "ad_model": "mediapipe_face_full"
+                    }
+            ]
+        }
+    }
+}
