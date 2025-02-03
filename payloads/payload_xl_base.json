@@ -1,15 +1,15 @@
 {
-    "prompt": "a cute cat",
+    "prompt": "hello world!",
     "negative_prompt": "(worst quality:2, low quality:2, normal quality:2), easynegative, ng_deepnegative_v1_75t, (Heavy Makeup), (double eyelid:1.4), eyeshadow, (eyeliner), eyelashes, Earrings, Necklaces, (Monochrome), (nsfw:1.4), bad_prompt_version2-neg, (teeth:1.8)",
     "steps": 30,
     "seed": -1,
-    "width": 1024,
+    "width": 812,
     "height": 1024,
     "cfg_scale": 7,
     "sampler_name": "DPM++ 3M SDE",
-    "scheduler": "Automatic",
+    "scheduler": "Karras",
     "n_iter": 1,
-    "batch_size": 1,
+    "batch_size": 2,
     "clip_skip": 2,
     "override_settings": {"sd_model_checkpoint": "sd_xl_base_1.0"},
     "alwayson_scripts":{
@@ -18,6 +18,10 @@
                     {
                     "ad_prompt": "beautiful face, detailed face, cute",
                     "ad_model": "mediapipe_face_full"
+                    },
+                    {
+                    "ad_prompt": "realistic hands, detailed hands",
+                    "ad_model": "hand_yolov8n.pt"
                     }
             ]
         }
