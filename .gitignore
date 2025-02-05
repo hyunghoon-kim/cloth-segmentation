@@ -4,13 +4,14 @@ output_images/*
 trained_checkpoint/*
 !output_images/.keep
 checkpoint_u2net.pth
+output*
 chunk_*
 conditions_*
 images_*
 captions_*
 foo
 img_human_reg
-
+prompts/*
 
 
 # Byte-compiled / optimized / DLL files

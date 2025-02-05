@@ -1,0 +1,29 @@
+{
+    "prompt": "",
+    "negative_prompt": "",
+    "steps": 30,
+    "seed": -1,
+    "width": 1024,
+    "height": 1024,
+    "cfg_scale": 3,
+    "sampler_name": "Euler a",
+    "scheduler": "Automatic",
+    "n_iter": 1,
+    "batch_size": 4,
+    "clip_skip": 2,
+    "override_settings": {"sd_model_checkpoint": "assign_your_checkpoint_name"},
+    "alwayson_scripts":{
+        "ADetailer": {
+                "args": [
+                    {
+                    "ad_prompt": "",
+                    "ad_model": "mediapipe_face_full"
+                    },
+                    {
+                    "ad_prompt": "",
+                    "ad_model": "hand_yolov8n.pt"
+                    }
+            ]
+        }
+    }
+}

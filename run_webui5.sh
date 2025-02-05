@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=5 /workspace/khh/stable-diffusion-webui/webui.sh -f --xformers --api --port=8195 --no-half-vae
