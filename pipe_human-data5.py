@@ -31,10 +31,10 @@ url = "http://127.0.0.1:8195"
 device = "cuda:5"
 json_file_path = './payloads/payload_human.json'
 u2_checkpoint_path = os.path.join("trained_checkpoint", "cloth_segm.pth")
-prompt_paths = glob("./prompts/*.txt")
+prompt_paths = glob("./prompts2/*.txt")
 
-chunk_dir = "output_chunk-images5"
-caption_dir = "output_captions5"
+chunk_dir = "output_chunk-images15"
+caption_dir = "output_captions15"
 
 u2net = U2NET(in_ch=3, out_ch=4)
 u2net = load_checkpoint_mgpu(u2net, u2_checkpoint_path)
@@ -200,8 +200,10 @@ if __name__ == "__main__":
         ## load prompt from file
         prompt_path = random.choice(prompt_paths)
         with open(prompt_path, "r", encoding="utf-8") as f:
-            payload["prompt"] = f.read()
-            payload["alwayson_scripts"]["ADetailer"]["args"][0]["ad_prompt"] = f.read()
+            prompt = f.read() + "<lora:hand 5.5:1>"
+            payload["prompt"] = prompt
+            payload["alwayson_scripts"]["ADetailer"]["args"][0]["ad_prompt"] = prompt
+            payload["alwayson_scripts"]["ADetailer"]["args"][1]["ad_prompt"] = prompt
 
         # 😀 DEL, for print
         # print(f"{order+1}:", payload["prompt"], flush=True)
@@ -254,6 +256,7 @@ if __name__ == "__main__":
 
 
             caption = payload["prompt"]
+            caption = caption.replace("<lora:hand 5.5:1>", "") # add
             overlay = cv2.addWeighted(img_bgr, 0.5, pred3, 0.5, 0)
             chunk = np.concatenate([img_bgr, pred3, overlay, condition_img], axis=1)    
 

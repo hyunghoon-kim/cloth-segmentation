@@ -200,8 +200,10 @@ if __name__ == "__main__":
         ## load prompt from file
         prompt_path = random.choice(prompt_paths)
         with open(prompt_path, "r", encoding="utf-8") as f:
-            payload["prompt"] = f.read()
-            payload["alwayson_scripts"]["ADetailer"]["args"][0]["ad_prompt"] = f.read()
+            prompt = f.read() + "<lora:hand 5.5:1>"
+            payload["prompt"] = prompt
+            payload["alwayson_scripts"]["ADetailer"]["args"][0]["ad_prompt"] = prompt
+            payload["alwayson_scripts"]["ADetailer"]["args"][1]["ad_prompt"] = prompt
 
         # 😀 DEL, for print
         # print(f"{order+1}:", payload["prompt"], flush=True)
@@ -254,6 +256,7 @@ if __name__ == "__main__":
 
 
             caption = payload["prompt"]
+            caption = caption.replace("<lora:hand 5.5:1>", "") # add
             overlay = cv2.addWeighted(img_bgr, 0.5, pred3, 0.5, 0)
             chunk = np.concatenate([img_bgr, pred3, overlay, condition_img], axis=1)    
 

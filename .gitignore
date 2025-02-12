@@ -12,6 +12,7 @@ captions_*
 foo
 img_human_reg
 prompts/*
+prompts2/*
 
 
 # Byte-compiled / optimized / DLL files

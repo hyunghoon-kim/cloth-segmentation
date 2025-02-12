@@ -1,6 +1,6 @@
 {
     "prompt": "",
-    "negative_prompt": "",
+    "negative_prompt": "no hand in pocket, no hands in pockets",
     "steps": 30,
     "seed": -1,
     "width": 1024,
